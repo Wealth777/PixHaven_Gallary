@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixHaven | Settings</title>
+    <link rel="stylesheet" href="../styles/settings.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  </head>
+  <body>
+       <div id="loader" class="loader-overlay">
+        <div class="spinner"></div>
+        <p>Loading your profile...</p>
+      </div>
+
+    <aside class="sidebar" id="sidebar">
+      <button id="sideToggle"><i class="fa fa-bars"></i></button>
+      <div class="logocont">
+        <div class="logo"><img src="../assets//unnamed-removebg-preview.png"
+            alt="PexHaven"><p>PixHaven</p></div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="./usersDashboard.html"><i class="fa fa-home"></i> <span
+                class="sidebar-text">Dashboard</span></a></li>
+          <li><a href="./explore.html"><i class="fa-solid fa-compass"></i> <span
+                class="sidebar-text">Explore</span></a></li>
+          <li><a href="./my-images.html"><i class="fa fa-image"></i> <span
+                class="sidebar-text">My Images</span></a></li>
+          <li><a href="./pixbot.html"><i class="fa fa-robot"></i> <span
+                class="sidebar-text">PixBot</span></a></li>
+          <li><a href="./settings.html"><i class="fa fa-cog"></i> <span
+                class="sidebar-text">Settings</span></a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" aria-label="Toggle theme"><i
+          class="fa fa-sun"></i> <span
+          class="sidebar-text">Theme</span></button>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <h1>Settings</h1>
+        <div class="profile">
+          <div>
+            <h4 class="greetings">Hello👋</h4>
+            <p id="showUsername"></p>
+          </div>
+          <img src alt="User" id="profilePicture">
+        </div>
+      </header>
+
+      <div class="settings-container">
+
+        <section class="settings-section">
+          <h2><i class="fa fa-user"></i> Profile Settings</h2>
+          <div class="setting-item">
+            <div class="profile-picture-settings">
+              <img src alt="Profile Picture" id="profilePreview">
+              <button class="change-picture-btn" id="changePP">Change Picture</button>
+              <input type="file" id="userpic" accept="image/*" hidden>
+            </div>
+          </div>
+          <div class="setting-item">
+            <label>Display Name</label>
+            <input type="text" id="displayName" placeholder="Your display name">
+          </div>
+          <div class="setting-item">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="your.email@example.com">
+          </div>
+          <button class="change-picture-btn" id="editInfo">Change
+            Picture</button>
+        </section>
+
+        <section class="settings-section">
+          <h2><i class="fa fa-palette"></i> Appearance</h2>
+          <div class="setting-item">
+            <label>Theme</label>
+            <div class="theme-selector">
+              <button class="theme-btn" data-theme="light">Light</button>
+              <button class="theme-btn" data-theme="dark">Dark</button>
+              <button class="theme-btn" data-theme="auto">Auto</button>
+            </div>
+          </div>
+          <div class="setting-item">
+            <label>Layout Density</label>
+            <select id="layoutDensity">
+              <option value="comfortable">Comfortable</option>
+              <option value="compact">Compact</option>
+              <option value="expanded">Expanded</option>
+            </select>
+          </div>
+          <div class="setting-item">
+            <label>Language</label>
+            <select id="language">
+              <option value="en">English</option>
+              <option value="fr">French</option>
+              <option value="es">Spanish</option>
+              <option value="de">German</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="settings-section">
+          <h2><i class="fa fa-lock"></i> Privacy & Security</h2>
+          <div class="setting-item">
+            <label>Profile Visibility</label>
+            <select id="profileVisibility">
+              <option value="public">Public</option>
+              <option value="private">Private</option>
+              <option value="friends">Friends Only</option>
+            </select>
+          </div>
+          <div class="setting-item">
+            <label>Two-Factor Authentication</label>
+            <div class="toggle">
+              <input type="checkbox" id="2fa">
+              <label for="2fa"></label>
+            </div>
+          </div>
+        </section>
+
+        <section class="settings-section">
+          <h2><i class="fa fa-bell"></i> Notifications</h2>
+          <div class="setting-item">
+            <label>Email Notifications</label>
+            <div class="toggle">
+              <input type="checkbox" id="emailNotif">
+              <label for="emailNotif"></label>
+            </div>
+          </div>
+          <div class="setting-item">
+            <label>Push Notifications</label>
+            <div class="toggle">
+              <input type="checkbox" id="pushNotif">
+              <label for="pushNotif"></label>
+            </div>
+          </div>
+          <div class="setting-item">
+            <label>Newsletter</label>
+            <div class="toggle">
+              <input type="checkbox" id="newsletter">
+              <label for="newsletter"></label>
+            </div>
+          </div>
+        </section>
+
+        <section class="settings-section">
+          <h2><i class="fa fa-database"></i> Storage</h2>
+          <div class="storage-info-panel">
+            <div class="storage-bar">
+              <div class="storage-fill" style="width: 45%;">
+                <span>45% Used</span>
+              </div>
+            </div>
+            <p>4.5 GB of 10 GB used</p>
+            <button class="upgrade-storage-btn">Upgrade Storage</button>
+          </div>
+        </section>
+
+        <section class="settings-section danger-zone">
+          <h2><i class="fa fa-exclamation-triangle"></i> Account Actions</h2>
+          <div class="account-actions">
+            <button class="logout-btn"><i class="fa fa-sign-out"></i>
+              Logout</button>
+            <button class="delete-btn"><i class="fa fa-trash"></i> Delete
+              Account</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script src="../scripts/settings.js" type="module"></script>
+  </body>
+</html>

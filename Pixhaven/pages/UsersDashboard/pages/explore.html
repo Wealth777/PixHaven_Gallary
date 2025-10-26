@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixHaven | Explore</title>
+  <link rel="stylesheet" href="../styles/explore.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="loader" class="loader-overlay">
+      <div class="spinner"></div>
+        <p>Loading your profile...</p>
+    </div>
+    
+  <aside class="sidebar">
+    <button id="sideToggle"><i class="fa fa-bars"></i></button>
+    <div class="logocont">
+      <div class="logo">
+        <img src="../assets/unnamed-removebg-preview.png" alt="PixHaven logo">
+        <p>PixHaven</p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="./usersDashboard.html"><i class="fa fa-home"></i> <span class="sidebar-text">Dashboard</span></a>
+        </li>
+        <li><a href="./explore.html" class="active"><i class="fa-solid fa-compass"></i> <span
+              class="sidebar-text">Explore</span></a></li>
+        <li><a href="./my-images.html"><i class="fa fa-image"></i> <span class="sidebar-text">My Images</span></a></li>
+        <li><a href="./pixbot.html"><i class="fa fa-robot"></i> <span class="sidebar-text">PixBot</span></a></li>
+        <li><a href="./settings.html"><i class="fa fa-cog"></i> <span class="sidebar-text">Settings</span></a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle" aria-label="Toggle theme">
+      <i class="fa fa-sun"></i> <span class="sidebar-text">Theme</span>
+    </button>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="topbar">
+      <h1>Explore</h1>
+      <div class="search-bar">
+        <input type="text" placeholder="Search images, tags or users...">
+        <button><i class="fa fa-search"></i></button>
+      </div>
+      <div class="profile">
+        <div>
+          <h4 class="greetings">Hello👋</h4>
+          <p id="showUsername"></p>
+        </div>
+        <img src alt="User" id="profilePicture">
+      </div>
+    </header>
+
+    <div class="category-bar">
+      <button class="active">All</button>
+      <button>Nature</button>
+      <button>Technology</button>
+      <button>People</button>
+      <button>Abstract</button>
+      <button>Animals</button>
+      <button>Art</button>
+    </div>
+
+    <section class="explore-section">
+      <h2>Trending Now</h2>
+      <div class="explore-grid">
+        <div class="explore-item"><img src="./asset/sample1.jpg" alt>
+          <div class="overlay"><i class="fa fa-eye"></i></div>
+        </div>
+        <div class="explore-item"><img src="./asset/sample2.jpg" alt>
+          <div class="overlay"><i class="fa fa-eye"></i></div>
+        </div>
+        <div class="explore-item"><img src="./asset/sample3.jpg" alt>
+          <div class="overlay"><i class="fa fa-eye"></i></div>
+        </div>
+        <div class="explore-item"><img src="./asset/sample4.jpg" alt>
+          <div class="overlay"><i class="fa fa-eye"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="explore-section">
+      <h2>Latest Uploads</h2>
+      <div class="explore-grid">
+        <div class="explore-item"><img src="./asset/sample5.jpg" alt>
+          <div class="overlay"><i class="fa fa-eye"></i></div>
+        </div>
+        <div class="explore-item"><img src="./asset/sample6.jpg" alt>
+          <div class="overlay"><i class="fa fa-eye"></i></div>
+        </div>
+        <div class="explore-item"><img src="./asset/sample7.jpg" alt>
+          <div class="overlay"><i class="fa fa-eye"></i></div>
+        </div>
+        <div class="explore-item"><img src="./asset/sample8.jpg" alt>
+          <div class="overlay"><i class="fa fa-eye"></i></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="../scripts/explore.js"></script>
+</body>
+
+</html>

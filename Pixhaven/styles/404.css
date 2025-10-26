@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #000000, #e60e27);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+.scene {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: linear-gradient(90deg, #e60e27, #460404);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  backdrop-filter: blur(12px);
+}
+
+.card:hover {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.error-title {
+  font-size: 6rem;
+  margin: 0;
+  background: linear-gradient(90deg, #ffd600, #ffffff);
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ffd600;
+  }
+
+  to {
+    text-shadow: 0 0 25px #ffffff;
+  }
+}
+
+.error-text {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+  opacity: 0.9;
+}
+
+.countdown-box {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #b8dfff;
+}
+
+.home-btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ffd600, #d32f2f);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  background: linear-gradient(90deg, #d32f2f, #ffd600);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}

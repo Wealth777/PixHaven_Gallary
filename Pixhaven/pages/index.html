@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixHaven Gallery</title>
+    <link rel="stylesheet" href="../styles/explore.css">
+
+  </head>
+
+  <body>
+
+    <header class="top-bar">
+      <div class="logo-area">
+        <h1 class="logo">Pix<span>Haven</span></h1>
+      </div>
+
+      <div class="search-area">
+        <input type="text" id="searchInput"
+          placeholder="Search for images..." />
+        <button id="searchBtn">🔍</button>
+
+        <select id="categoryFilter">
+          <option value>All</option>
+          <option value="nature">Nature</option>
+          <option value="city">City</option>
+          <option value="people">People</option>
+          <option value="abstract">Abstract</option>
+          <option value="animals">Animals</option>
+        </select>
+
+      </div>
+
+      <div class="controls">
+        <button id="themeToggle" title="Toggle theme">🌙</button>
+      </div>
+    </header>
+
+    <main class="gallery-container">
+      <div id="gallery" class="gallery"></div>
+    </main>
+
+    <div class="load-more-container">
+      <button id="loadMoreBtn">Load More</button>
+    </div>
+
+    <div id="imageModal" class="modal hidden">
+      <div class="modal-content">
+        <span id="closeModal">&times;</span>
+        <img id="modalImage" alt>
+        <div class="modal-info">
+          <p><strong>Photographer:</strong> <span id="photographer"></span></p>
+          <p><strong>Resolution:</strong> <span id="resolution"></span></p>
+          <button id="downloadBtn">Download</button>
+          <button id="addToGalleryBtn">Add to My Gallery</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <h2>PixHaven <span>Galleries</span></h2>
+          <p>Discover, collect, and be inspired by beautiful imagery.</p>
+        </div>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="./index.html">Home</a>
+        <a href="./explore.html">Explore</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./signin.html">Sign In</a>
+        <a href="./signup.html">Sign up</a>
+      </nav>
+
+      <div class="footer-bottom">
+        © <span id="year">2025</span> PixHaven. All rights reserved. — Built
+        with love.
+      </div>
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+  </body>
+
+</html>

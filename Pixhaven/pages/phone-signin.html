@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixHaven | Phone Sign-In</title>
+    <link rel="stylesheet" href="phone-auth.css">
+  </head>
+  <body>
+
+    <div class="auth-container">
+      <h2>📱 Sign in with Phone Number</h2>
+
+      <div class="input-group">
+        <input type="text" id="phoneNumber" placeholder="+2348012345678">
+      </div>
+
+      <div id="recaptcha-container"></div>
+
+      <button class="btn send-btn" onclick="sendOTP()">Send OTP</button>
+
+      <div id="verify-section" class="verify-section">
+        <input type="text" id="otpCode" placeholder="Enter OTP">
+        <button class="btn verify-btn" onclick="verifyOTP()">Verify OTP</button>
+      </div>
+
+      <div class="divider">Go back to Signup</div>
+      <p class="switch"><a href="signup.html">Sign Up</a></p>
+    </div>
+
+    <script>
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+        import { getAuth, RecaptchaVerifier } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAZeXRLtizNVxoROHfCWwYFZYzCrrHUVjs",
+            authDomain: "pixhaven-gallary.firebaseapp.com",
+            projectId: "pixhaven-gallary",
+            storageBucket: "pixhaven-gallary.firebasestorage.app",
+            messagingSenderId: "22248391827",
+            appId: "1:22248391827:web:d6617252875deab4da3966"
+        };
+    const app = firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    auth.languageCode = 'it';
+
+
+    window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+      'size': 'normal',
+      'callback': (response) => {
+        console.log("reCAPTCHA verified!");
+      },
+        'expired-callback': () => {
+    // Response expired. Ask user to solve reCAPTCHA again.
+    // ...
+  }
+    });
+
+    function sendOTP() {
+      const phoneNumber = document.getElementById("phoneNumber").value;
+      const appVerifier = window.recaptchaVerifier;
+
+      firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
+        .then((confirmationResult) => {
+          window.confirmationResult = confirmationResult;
+          alert("OTP sent successfully ✅");
+          document.querySelector(".verify-section").style.display = "block";
+        })
+        .catch((error) => {
+          alert(error.message);
+          console.error(error);
+        });
+    }
+
+    function verifyOTP() {
+      const code = document.getElementById("otpCode").value;
+      confirmationResult.confirm(code)
+        .then((result) => {
+          const user = result.user;
+          alert("Phone number verified 🎉");
+          console.log("User:", user);
+        })
+        .catch((error) => {
+          alert("Invalid OTP ❌");
+          console.error(error);
+        });
+    }
+  </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixHaven | PixBot</title>
+    <link rel="stylesheet" href="../styles/pixbot.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <button id="sideToggle"><i class="fa fa-bars"></i></button>
+      <div class="logocont">
+        <div class="logo">
+          <img src="../assets/unnamed-removebg-preview.png" alt="PixHaven logo">
+          <p>PixHaven</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="./usersDashboard.html"><i class="fa fa-home"></i> <span
+                class="sidebar-text">Dashboard</span></a></li>
+          <li><a href="./explore.html"><i class="fa-solid fa-compass"></i> <span
+                class="sidebar-text">Explore</span></a></li>
+          <li><a href="./my-images.html"><i class="fa fa-image"></i> <span
+                class="sidebar-text">My Images</span></a></li>
+          <li><a href="./pixbot.html" class="active"><i class="fa fa-robot"></i>
+              <span class="sidebar-text">PixBot</span></a></li>
+          <li><a href="./settings.html"><i class="fa fa-cog"></i> <span
+                class="sidebar-text">Settings</span></a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" aria-label="Toggle theme">
+        <i class="fa fa-sun"></i> <span class="sidebar-text">Theme</span>
+      </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="topbar">
+        <h1>PixBot</h1>
+        <div class="profile">
+          <img src="./asset/user.jpg" alt="User Profile">
+        </div>
+      </header>
+
+      <!-- Chat Area -->
+      <section class="chat-section">
+        <div class="chat-window" id="chatWindow">
+          <div class="bot-message">
+            <i class="fa fa-robot"></i>
+            <p>Hello 👋 I'm <strong>PixBot</strong> — your image assistant! How
+              can I help you today?</p>
+          </div>
+        </div>
+
+        <div class="chat-input">
+          <input type="text" id="userInput"
+            placeholder="Type your message..." />
+          <button id="sendBtn"><i class="fa fa-paper-plane"></i></button>
+        </div>
+      </section>
+    </main>
+
+    <script src="../scripts/pixbot.js"></script>
+  </body>
+</html>

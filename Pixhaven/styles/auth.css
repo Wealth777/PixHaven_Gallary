@@ -1,0 +1,324 @@
+.root-variables {
+    --primary: #2563EB;
+    --accent: #EF4444;
+    --secondary: #581C87;
+    --highlight: #FACC15;
+    --background: #581C87;
+    --text: #0F172A;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: linear-gradient(135deg, #030518, #0d64b1);
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 980px;
+    display: flex;
+    justify-content: center;
+}
+
+.auth-box {
+    width: 100%;
+    max-width: 550px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.auth-box h1 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: 900;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: white;
+    opacity: 0.85;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    outline: none;
+    font-size: 15px;
+    background: #fff;
+    transition: box-shadow 0.16s ease, transform 0.12s ease;
+}
+
+.auth-form input:focus {
+    box-shadow: 0 8px 28px rgba(37, 99, 235, 0.08);
+    transform: translateY(-2px);
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.password-wrapper input {
+    flex: 1;
+    padding-right: 45px;
+    border-radius: 10px;
+}
+
+
+.password-wrapper .fa-eye {
+    position: absolute;
+    right: 12px;
+    color: #555;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.2s ease, transform 0.12s ease;
+}
+
+.password-wrapper .fa-eye-slash {
+    position: absolute;
+    right: 12px;
+    color: #555;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.2s ease, transform 0.12s ease;
+}
+
+.password-wrapper .fa-eye:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+.password-wrapper .fa-eye-slash:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+.password-wrapper .fa-eye:active {
+    transform: scale(0.95);
+}
+
+
+.btn {
+    background: linear-gradient(90deg, #ff00de 30%, #00c6ff 100%);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.18s ease;
+    box-shadow: 0 8px 26px rgba(37, 99, 235, 0.12);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: var(--button-bg, linear-gradient(90deg, #00c6ff 30%, #ff00de 100%));
+}
+
+.sign {
+    font-weight: 700;
+    color: #fff;
+}
+
+.divider {
+    margin: 18px 0;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+}
+
+.social-login {
+    display: grid;
+    gap: 10px;
+}
+
+.social-btn {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(15, 23, 42, 0.04);
+    color: var(--text);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    font-weight: 700;
+}
+
+.social-btn.google {
+    background: linear-gradient(90deg, #4285F4 0%, #DB4437 50%, #F4B400 75%, #0F9D58 100%);
+    color: #fff;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn.google:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(66, 133, 244, 0.6);
+    background: linear-gradient(90deg, #0F9D58 0%, #F4B400 50%, #DB4437 75%, #4285F4 100%);
+}
+
+.social-btn.github {
+    background: linear-gradient(90deg, #333333 0%, #6e5494 100%);
+    color: #fff;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn.github:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(51, 51, 51, 0.6);
+    background: linear-gradient(90deg, #6e5494 0%, #333333 100%);
+}
+
+.social-btn.apple {
+    background: linear-gradient(90deg, #000000 0%, #434343 100%);
+    color: #fff;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn.apple:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(90deg, #434343 0%, #000000 100%);
+}
+
+.switch {
+    margin-top: 18px;
+    font-size: 14px;
+    color: white;
+}
+
+.switch a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.switch a:hover {
+    color: #c2bebe;
+}
+
+@media (max-width: 520px) {
+    .auth-box {
+        padding: 20px;
+        max-width: 360px;
+    }
+
+    .auth-form input {
+        padding: 10px;
+    }
+
+    .auth-box h1 {
+        font-size: 20px;
+    }
+}
+
+.muted {
+    color: rgba(15, 23, 42, 0.6);
+}
+
+
+.emailInUse {
+    display: none;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #fff;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 12px 0;
+}
+
+.emailInUse.active {
+    display: block;
+}
+
+.emailInUse p {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+}
+
+.testMail {
+    display: none;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #fff;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 12px 0;
+}
+
+.testMail.active {
+    display: block;
+}
+
+.testMail p {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+}
+
+.verification-notice {
+    display: none;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #fff;
+    padding: 14px;
+    border-radius: 10px;
+    margin: 12px 0;
+}
+
+.verification-notice.active {
+    display: block;
+}
+
+.verification-notice p {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+}
+
+.verification-notice .verification-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.verification-btn {
+    background: linear-gradient(90deg, #00c6ff 10%, #ff00de 90%);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.verification-dismiss {
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}

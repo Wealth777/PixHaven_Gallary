@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore | PixHaven</title>
+    <link rel="stylesheet" href="../styles/explore.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <h1 class="logo">PixHaven</h1>
+      <div class="categories">
+        <button class="cat-btn" data-category>🔥 Trending</button>
+        <button class="cat-btn" data-category="nature">🌿 Nature</button>
+        <button class="cat-btn" data-category="technology">💻 Tech</button>
+        <button class="cat-btn" data-category="animals">🐾 Animals</button>
+        <button class="cat-btn" data-category="people">👥 People</button>
+        <button class="cat-btn" data-category="city">🏙️ City</button>
+      </div>
+
+      <div class="controls">
+        <button id="themeToggle" title="Toggle theme">🌙</button>
+      </div>
+    </header>
+
+    <main class="gallery-container">
+      <div id="gallery" class="gallery"></div>
+    </main>
+
+    <div id="imageModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <img id="modalImg" src alt="Preview" />
+        <div class="modal-info">
+          <p><strong>Photographer:</strong> <span id="author"></span></p>
+          <a id="downloadLink" href="#" target="_blank" class="download-btn">⬇️
+            Download</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <h2>PixHaven <span>Galleries</span></h2>
+          <p>Discover, collect, and be inspired by beautiful imagery.</p>
+        </div>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="./index.html">Home</a>
+        <a href="./explore.html">Explore</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./signin.html">Sign In</a>
+        <a href="./signup.html">Sign up</a>
+      </nav>
+
+      <div class="footer-bottom">
+        © <span id="year">2025</span> PixHaven. All rights reserved. — Built
+        with love.
+      </div>
+    </footer>
+    <script src="../scripts/explore.js"></script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixHaven | My Images</title>
+  <link rel="stylesheet" href="../styles/my-images.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- <div id="loader" class="loader-overlay">
+    <div class="spinner"></div>
+    <p>Loading your profile...</p>
+  </div> -->
+
+  <aside class="sidebar">
+    <button id="sideToggle"><i class="fa fa-bars"></i></button>
+    <div class="logocont">
+      <div class="logo">
+        <img src="../assets/unnamed-removebg-preview.png" alt="PixHaven logo">
+        <p>PixHaven</p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="./usersDashboard.html"><i class="fa fa-home"></i> <span class="sidebar-text">Dashboard</span></a>
+        </li>
+        <li><a href="./explore.html"><i class="fa-solid fa-compass"></i> <span class="sidebar-text">Explore</span></a>
+        </li>
+        <li><a href="./my-images.html" class="active"><i class="fa fa-image"></i> <span class="sidebar-text">My
+              Images</span></a></li>
+        <li><a href="./pixbot.html"><i class="fa fa-robot"></i> <span class="sidebar-text">PixBot</span></a></li>
+        <li><a href="./settings.html"><i class="fa fa-cog"></i> <span class="sidebar-text">Settings</span></a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle" aria-label="Toggle theme"><i class="fa fa-sun"></i> <span
+        class="sidebar-text">Theme</span></button>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <h1>My Images</h1>
+      <div class="profile">
+        <div>
+          <h4 class="greetings">Hello👋</h4>
+          <p id="showUsername"></p>
+        </div>
+        <img src alt="User" id="profilePicture">
+      </div>
+    </header>
+
+    <section class="image-page">
+      <div class="top-bar-right">
+        <button class="upload-btn" onclick="upload()">
+          <i class="fa-solid fa-upload"></i> Upload Image
+        </button>
+      </div>
+
+      <section class="storage-section">
+        <p><strong>Storage Used:</strong> 3.2 GB / 10 GB</p>
+        <div class="storage-bar">
+          <div class="storage-fill" style="width: 32%;"></div>
+        </div>
+      </section>
+
+      <section class="gallery-section">
+        <h2>Your Gallery</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src alt="User Image">
+            <div class="overlay">
+              <i class="fa-solid fa-eye"></i>
+              <i class="fa-solid fa-trash"></i>
+            </div>
+          </div>
+
+          <div class="gallery-item add-new">
+            <i class="fa-solid fa-plus"></i>
+            <p>Add New</p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script type="module" src="../scripts/my-image.js"></script>
+</body>
+
+</html>

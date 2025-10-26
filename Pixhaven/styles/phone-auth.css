@@ -1,0 +1,98 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #030518, #0d64b1);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.auth-container {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-align: center;
+}
+
+#recaptcha-container {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.send-btn {
+  background: linear-gradient(90deg, #ff00de, #00c6ff);
+}
+
+.verify-btn {
+  background: linear-gradient(90deg, #ff00de, #00c6ff);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  background: linear-gradient(90deg, #00c6ff, #ff00de);
+}
+
+.verify-section {
+  display: none;
+  margin-top: 20px;
+}
+
+.switch {
+  margin-top: 18px;
+  font-size: 14px;
+  color: white;
+}
+
+.switch a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.switch a:hover {
+  color: #c2bebe;
+}
+
+
+.divider {
+  margin: 18px 0;
+  font-size: 13px;
+  color: white;
+  text-align: center;
+}
